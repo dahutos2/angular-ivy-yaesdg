@@ -14,6 +14,7 @@ export class BuyComponent implements OnInit {
 
   ngOnInit(): void {
     this.getItems();
+    console.log(this.items);
   }
 
   getItems(): void {
