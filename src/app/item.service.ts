@@ -5,7 +5,7 @@ import { Item } from './item';
 import { Observable, of } from 'rxjs';
 import { catchError, tap } from 'rxjs/operators';
 
-@Injectable()
+@Injectable({ providedIn: 'root' })
 export class ItemService {
   constructor(
     private http: HttpClient,
