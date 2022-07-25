@@ -15,7 +15,6 @@ export class InMemoryDataService implements InMemoryDbService {
     ];
     return { items };
   }
-
   // Itemが常にidを持つようにするためにgenIdメソッドをオーバーライドします。
   // items配列が空の場合。
   // この場合、以下のメソッドは初期値（10）を返します。

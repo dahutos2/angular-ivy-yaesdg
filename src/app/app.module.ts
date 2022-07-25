@@ -6,9 +6,20 @@ import { BuyComponent } from './buy/buy.component';
 import { MessageComponent } from './message/message.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryDataService } from './in-memory-data.service';
 
 @NgModule({
-  imports: [BrowserModule, FormsModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    HttpClientModule,
+    // HttpClientInMemoryWebApiModuleモジュールは、HTTPリクエストを傍受する。
+    // シミュレートされたサーバーレスポンスを返します。
+    // 実際のサーバーがリクエストを受信できるようになったら、これを削除してください。
+    HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, {
+      dataEncapsulation: false,
+    }),
+  ],
   declarations: [AppComponent, BuyComponent, MessageComponent],
   bootstrap: [AppComponent],
 })
