@@ -20,6 +20,7 @@
     "@angular/material": "^14.1.0",
     "@angular/platform-browser": "^14.1.0",
     "@angular/platform-browser-dynamic": "^14.1.0",
+    "@angular/platform-browser/animations": "*",
     "@angular/router": "^14.1.0",
     "angular-in-memory-web-api": "^0.14.0",
     "rxjs": "^7.5.6",
