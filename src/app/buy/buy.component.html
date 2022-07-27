@@ -8,4 +8,14 @@
     </a>
   </li>
 </ul>
-<mat-button-toggle-group> </mat-button-toggle-group>
+<div>
+  <p>トグルボタンを表示していく</p>
+  <mat-button-toggle-group>
+    <mat-button-toggle (click)="tglClick(1)">あ</mat-button-toggle>
+    <mat-button-toggle (click)="tglClick(2)">い</mat-button-toggle>
+    <mat-button-toggle (click)="tglClick(3)">う</mat-button-toggle>
+    <mat-button-toggle (click)="tglClick(4)">え</mat-button-toggle>
+    <mat-button-toggle (click)="tglClick(5)">お</mat-button-toggle>
+  </mat-button-toggle-group>
+  <p>{{ text }}</p>
+</div>
