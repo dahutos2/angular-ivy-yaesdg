@@ -7,6 +7,7 @@ import { MessageComponent } from './message/message.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
 
 @NgModule({
   imports: [
@@ -19,6 +20,7 @@ import { InMemoryDataService } from './in-memory-data.service';
     HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, {
       dataEncapsulation: false,
     }),
+    MatButtonToggleModule,
   ],
   declarations: [AppComponent, BuyComponent, MessageComponent],
   bootstrap: [AppComponent],
