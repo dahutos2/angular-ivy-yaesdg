@@ -10,12 +10,15 @@
 </ul>
 <div>
   <p>トグルボタンを表示していく</p>
-  <mat-button-toggle-group >
+  <mat-button-toggle-group [(ngModel)]="flag">
     <mat-button-toggle (click)="tglClick(1)">あ</mat-button-toggle>
     <mat-button-toggle (click)="tglClick(2)">い</mat-button-toggle>
     <mat-button-toggle (click)="tglClick(3)">う</mat-button-toggle>
     <mat-button-toggle (click)="tglClick(4)">え</mat-button-toggle>
     <mat-button-toggle (click)="tglClick(5)">お</mat-button-toggle>
   </mat-button-toggle-group>
+  <button [disabled]="!isCheck || value === 0">ha</button>
   <p>{{ text }}</p>
+  <button (click)="getCheck()">ボタン</button>
+  <span> {{ isCheck }}</span>
 </div>

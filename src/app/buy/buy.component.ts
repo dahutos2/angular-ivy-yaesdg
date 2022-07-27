@@ -13,13 +13,16 @@ export class BuyComponent implements OnInit {
   items: Item[] = [];
   text: string = 'トグルボタン未選択';
   value: number;
+  flag: boolean;
+  isCheck: boolean;
 
   constructor(private itemService: ItemService) {}
 
   ngOnInit(): void {
     this.getItems();
-    console.log(this.items);
     this.value = 0;
+    this.flag = true;
+    this.isCheck = false;
   }
 
   getItems(): void {
@@ -30,9 +33,14 @@ export class BuyComponent implements OnInit {
     if (this.value === tglValue) {
       this.value = 0;
       this.text = 'トグルボタン未選択';
+      this.flag = false;
     } else {
       this.value = tglValue;
       this.text = '左から' + this.value + 'つ目を選択中';
     }
+  }
+
+  getCheck(): void {
+    this.isCheck = this.isCheck ? false : true;
   }
 }
